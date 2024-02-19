@@ -1,0 +1,30 @@
+.todo-container {
+  background-color: rgb(143, 238, 143);
+  padding: 0.125rem;
+  display: flex;
+}
+.svg-container {
+  fill: red;
+  width: 100px;
+  height: 100px;
+  margin: auto 0;
+  margin-left: 2rem;
+}
+.text-container {
+  margin: auto 0;
+  margin-left: 2rem;
+}
+
+@media (max-width: 48rem) {
+  .todo-container {
+    justify-content: center;
+  }
+  .svg-container {
+    width: 75px;
+    height: 75px;
+  }
+
+  .text-container h1 {
+    font-size: 1.25rem;
+  }
+}
