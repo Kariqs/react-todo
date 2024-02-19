@@ -4,3 +4,21 @@
 body {
   background-color: white;
 }
+
+.svg-div{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.clip-svg {
+  width: 400px;
+  height: 400px;
+}
+
+@media(max-width:48rem){
+  .clip-svg{
+    width: 200px;
+    height: 200px;
+  }
+}
