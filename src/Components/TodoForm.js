@@ -12,6 +12,10 @@ const TodoForm = (props) => {
   };
 
   const addTodo = () => {
+    if (task.toString().trim() === "") {
+      console.log("Please add a task first.");
+      return;
+    }
     props.onAddTask(task);
     setTask("");
   };
