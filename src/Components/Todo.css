@@ -16,9 +16,6 @@
 }
 
 @media (max-width: 48rem) {
-  .todo-container {
-    justify-content: center;
-  }
   .svg-container {
     width: 75px;
     height: 75px;

@@ -29,6 +29,11 @@
   cursor: pointer;
 }
 
+.todo-form.invalid input{
+  border-color: red;
+  background: rgb(235, 142, 142);
+}
+
 @media (max-width: 48rem) {
   .form-container {
     width: 95%;

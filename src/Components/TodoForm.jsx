@@ -4,16 +4,20 @@ import { useState } from "react";
 
 const TodoForm = (props) => {
   let inputValue;
-  let [task, setTask] = useState("");
+  const [task, setTask] = useState("");
+  const [inputIsValid, setInputIsValid] = useState(true);
 
   const inputChange = (event) => {
     inputValue = event.target.value;
+    if (inputValue.trim().length > 0) {
+      setInputIsValid(true);
+    }
     setTask(inputValue);
   };
 
   const addTodo = () => {
     if (task.toString().trim() === "") {
-      console.log("Please add a task first.");
+      setInputIsValid(false);
       return;
     }
     props.onAddTask(task);
@@ -22,7 +26,7 @@ const TodoForm = (props) => {
 
   return (
     <div className="form-container">
-      <form className="todo-form">
+      <form className={`todo-form ${!inputIsValid ? "invalid" : ""}`}>
         <input
           placeholder="Enter your task."
           value={task}
