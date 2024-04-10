@@ -1,0 +1,34 @@
+.textdiv {
+  width: 100%;
+  background-color: #fce89e;
+  padding: 3rem;
+  margin-top: 2rem;
+}
+
+.textdiv h2 {
+  color: #655d3f;
+  text-align: center;
+}
+
+.textdiv p {
+  color: #a7733f;
+  text-align: center;
+  font-style: italic;
+}
+
+.buttondiv {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.buttondiv button {
+  background-color: #665e40;
+  width: 10rem;
+  height: 2.5rem;
+  font: inherit;
+  color: white;
+  border: 1px solid #665e40;
+  font-weight: bold;
+  text-transform: uppercase;
+}

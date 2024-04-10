@@ -1,0 +1,12 @@
+.headerdiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.headerdiv img {
+  width: 40%;
+}
