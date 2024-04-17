@@ -1,13 +1,17 @@
 import styles from "./TodoForm.module.css";
-import React from "react";
+import React, { useState } from "react";
 
-const TodoForm = () => {
+const TodoForm = (props) => {
+  const [todo, setTodo] = useState({ todo: ""});
   const submitFormHandler = (event) => {
     event.preventDefault();
+    props.onGetTodo(todo);
   };
 
   const inputChangeHandler = (input, value) => {
-    console.log([input] + ":" + value);
+    setTodo((prevTodos) => {
+      return { ...prevTodos, [input]: value };
+    });
   };
   return (
     <React.Fragment>
@@ -23,16 +27,6 @@ const TodoForm = () => {
             id="todo"
             name="todo"
           />
-          <label htmlFor="desc">Describe the todo</label>
-          <textarea
-            onChange={(event) => {
-              inputChangeHandler("desc", event.target.value);
-            }}
-            name=""
-            id="desc"
-            cols="30"
-            rows="10"
-          ></textarea>
           <div className={styles.buttondiv}>
             <button type="submit">Save</button>
           </div>
